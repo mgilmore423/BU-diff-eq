@@ -28,10 +28,3 @@ def euler(equations,initials,dt,tf,ti):
 			results[i].append(new_vals[i])
 			# value calculted via Euler's metheod added to it's perspective list
 	return [results,ts]
-
-if __name__ == '__main__':
-	x = lambda x , y : y
-	y = lambda x , y : -2*x-3*y
-	result, times = euler([x,y],[1,1],0.25,5,0)
-	result = [i[-1] for i in result]
-	print(f'the result is: <{result[0]}, {result[1]}>')
